@@ -1,0 +1,33 @@
+.registerCss {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* margin-bottom: 5px; */
+}
+
+.form-control {
+  height: 25px;
+  padding: 10px;
+}
+
+.btn-primary {
+  border: none;
+  padding: 10px 20px;
+  background-color: #ff6f08;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn-primary:disabled {
+  background-color: #ff6f08;
+  cursor: not-allowed;
+}
