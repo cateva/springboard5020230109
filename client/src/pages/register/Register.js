@@ -30,21 +30,31 @@ const Register = () => {
     try {
       // console.log("before axios");
       // console.log(`credentials: ${credentials}`);
-      console.log(JSON.stringify(credentials));
+      // console.log(JSON.stringify(credentials));
       // console.log(`${credentials.hash}`);
 
-      const res = await axios.post("/auth/register", credentials);
+      const res = await axios.post(
+        "http://localhost:8800/api/auth/register",
+        credentials
+      );
 
       //
-      console.log(res);
+      // console.log(res);
       dispatch({ type: "REGISTER_SUCCESS", payload: res.data.details });
-      console.log("yes");
-      navigate("/");
+      // console.log("yes");
+      navigate("/login");
     } catch (err) {
       dispatch({ type: "REGISTER_FAILURE", payload: err.response.data });
-      console.log("no");
+      // console.log("no");
     }
   };
+
+  // const handleClick = async (e) => {
+  //   let copy = [...this.state.tasks];
+  //   copy.splice(id,1);
+  //   this.
+
+  // }
 
   return (
     <div className="registerCss">
@@ -68,7 +78,7 @@ const Register = () => {
               className="form-control"
               placeholder="Enter email"
               onChange={handleChange}
-              id="enter_email"
+              id="email"
             />
           </div>
           <div className="mb-3">
@@ -78,7 +88,7 @@ const Register = () => {
               className="form-control"
               placeholder="Enter password"
               onChange={handleChange}
-              id="enter_password"
+              id="password"
             />
           </div>
           <div className="mb-3">
