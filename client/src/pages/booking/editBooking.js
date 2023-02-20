@@ -49,7 +49,7 @@ export default () => {
       booking_start_date: booking_start_date,
       booking_end_date: booking_end_date,
     };
-    // console.log(bookingData);
+    console.log(bookingData);
     try {
       // updateDb = await HomeApi.createBooking(bookingData)
       await axios.put(`/booking/${id}`, bookingData);
@@ -65,7 +65,7 @@ export default () => {
       <div className="lContainer">
         <form>
           <div className="headerSearchItem">
-            Room Title:
+            Room Number:
             <span className="headerIcon"></span>
             <input
               type="string"

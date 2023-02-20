@@ -81,14 +81,14 @@ function BookingCard({
         <hr></hr>
         {/* <h2>Booking ID: {id}</h2> */}
         {/* <h2>User Name: {username}</h2> */}
-        <h2>Hotel Name: {hotel}</h2>
-        <h2>Hotel Address: {address}</h2>
-        <h2>Room Description : {room}</h2>
-        <h2>Room Number : {room_num.slice(15, 18)}</h2>
-        <h2>
+        <p>Hotel Name: {hotel}</p>
+        <p>Hotel Address: {address}</p>
+        <p>Room Description : {room}</p>
+        <p>Room Number : {room_num}</p>
+        <p>
           Booking Date: From {start_date} to {end_date}{" "}
-        </h2>
-        <h2>Total Price: ${price}</h2>
+        </p>
+        <p>Total Price: ${price}</p>
 
         <p>
           <button

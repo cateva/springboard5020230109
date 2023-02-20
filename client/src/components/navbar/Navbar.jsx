@@ -53,12 +53,12 @@ const Navbar = () => {
             <Link to="/booking">
               <button className="navButton">My Booking</button>
             </Link>
-            <Link
+            {/* <Link
               // changeToFalse={changeToFalse}
               to="/editProfile"
             >
               <button className="navButton">Edit Info</button>
-            </Link>
+            </Link> */}
             <button className="navButton" onClick={logout}>
               Logout
             </button>

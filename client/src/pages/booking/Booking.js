@@ -1,4 +1,6 @@
 import useFetch from "../../hooks/useFetch";
+import Navbar from "../../components/navbar/Navbar";
+import Header from "../../components/header/Header";
 import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
 import { Link } from "react-router-dom";
@@ -12,30 +14,34 @@ const BookingList = () => {
   const { data, loading, error } = useFetch(`/booking/${user.username}`);
 
   return (
-    <div className="login">
-      <div className="lContainer">
-        {data.length > 0 ? (
-          <div>
-            <h2>{data[0].username}'s booking:</h2>
-            {data.map((b) => (
-              <BookingCard
-                id={b._id}
-                username={b.username}
-                hotel={b.hotel_name}
-                address={b.hotel_address}
-                room={b.room_title}
-                room_num={b.room_number}
-                start_date={b.booking_start_date}
-                end_date={b.booking_end_date}
-                price={b.hotel_price}
-              />
-            ))}
-          </div>
-        ) : (
-          data.length
-        )}
+    <div className="navbar">
+      {/* <div className="navContainer"> */}
+      <Navbar />
 
-        {/* {data.length > 0 ? (
+      <div className="login">
+        <div className="lContainer">
+          {data.length > 0 ? (
+            <div>
+              <h2>{data[0].username}'s booking information:</h2>
+              {data.map((b) => (
+                <BookingCard
+                  id={b._id}
+                  username={b.username}
+                  hotel={b.hotel_name}
+                  address={b.hotel_address}
+                  room={b.room_title}
+                  room_num={b.room_number}
+                  start_date={b.booking_start_date}
+                  end_date={b.booking_end_date}
+                  price={b.hotel_price}
+                />
+              ))}
+            </div>
+          ) : (
+            data.length
+          )}
+
+          {/* {data.length > 0 ? (
           <div>
             <h2>User Name: {data[0].username}</h2>
             <h2>Hotel Name: {data[0].hotel_name}</h2>
@@ -55,9 +61,10 @@ const BookingList = () => {
         <button>Update My Booking</button>
         <button>Delete My Booking</button> */}
 
-        <Link to={`/`}>
-          <button>Back to homepage</button>
-        </Link>
+          <Link to={`/`}>
+            <button>Back to homepage</button>
+          </Link>
+        </div>
       </div>
     </div>
   );

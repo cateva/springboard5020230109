@@ -6,7 +6,7 @@
 }
 
 .navContainer {
-  width: 100%;
+  width: 100%; 
   max-width: 1024px;
   color: white;
   display: flex;
