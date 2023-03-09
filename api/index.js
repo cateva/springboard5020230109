@@ -10,10 +10,31 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 
 import Hotel from "./models/Hotel.js";
+const cors = require("cors");
 
 const app = express();
+
+const corsOptions = {
+  origin: "https://orange-booking-kenli.surge.sh",
+};
+app.use(cors(corsOptions));
 app.use(express.json());
 dotenv.config();
+
+// Define the API URL
+const apiUrl = "https://orangebooking2023.herokuapp.com/api";
+
+// Make a GET request to the API
+fetch(apiUrl)
+  .then((response) => response.json())
+  .then((data) => {
+    // Handle the API response
+    console.log(data);
+  })
+  .catch((error) => {
+    // Handle any errors
+    console.error(error);
+  });
 
 const connect = async () => {
   //initial connection
@@ -54,7 +75,7 @@ app.use((err, req, res, next) => {
   });
 });
 
-app.listen(8800, () => {
+app.listen(process.env.PORT || 8800, () => {
   connect();
-  console.log("connected to backend, GREAT JOB!!! ");
+  console.log("connected to backend ${process.env.PORT}, GREAT JOB!!! ");
 });
