@@ -127,7 +127,10 @@ const Reserve = ({ setOpen, hotelId }) => {
     // console.log(bookingData);
     try {
       // updateDb = await HomeApi.createBooking(bookingData)
-      await axios.post("/booking", bookingData);
+      await axios.post(
+        "https://orangebooking2023.herokuapp.com/api/booking",
+        bookingData
+      );
       // console.log("working");
     } catch (errors) {
       console.log(errors);

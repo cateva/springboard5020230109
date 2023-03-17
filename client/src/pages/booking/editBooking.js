@@ -52,7 +52,10 @@ export default () => {
     console.log(bookingData);
     try {
       // updateDb = await HomeApi.createBooking(bookingData)
-      await axios.put(`/booking/${id}`, bookingData);
+      await axios.put(
+        `https://orangebooking2023.herokuapp.com/api/booking/${id}`,
+        bookingData
+      );
       console.log("success");
     } catch (errors) {
       console.log(errors);

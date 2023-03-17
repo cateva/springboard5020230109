@@ -30,8 +30,10 @@ function BookingCard({
     try {
       //const res = await axios.post("/auth/login", credentials);
       //frontend call backend function using this
+      //
+      //http://localhost:8800
       const res = await axios.delete(
-        `http://localhost:8800/api/booking/${id}`,
+        `https://orangebooking2023.herokuapp.com/api/booking/${id}`,
         id
       );
       // console.log(`success: ${res}`);
@@ -54,7 +56,7 @@ function BookingCard({
 
     try {
       const res = await axios.get(
-        `http://localhost:8800/api/booking/search/${id}`
+        `https://orangebooking2023.herokuapp.com/api/booking/search/${id}`
       );
       console.log(JSON.stringify(res.data));
       const editRoom = res.data[0].room_number.slice(-5, -2);

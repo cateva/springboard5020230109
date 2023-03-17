@@ -34,7 +34,7 @@ const Register = () => {
       // console.log(`${credentials.hash}`);
 
       const res = await axios.post(
-        "http://localhost:8800/api/auth/register",
+        "https://orangebooking2023.herokuapp.com/api/auth/register",
         credentials
       );
 
