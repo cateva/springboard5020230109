@@ -1,45 +1,19 @@
 import "./navbar.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
 import { useState } from "react";
-
-// import { useNavigate } from "react-router-dom";
-// const navigate = useNavigate();
-// const handleLogin = () => {
-//   navigate("/hotels", { state: { destination, dates, options } });
-// };
 
 const logout = (e) => {
   e.preventDefault();
 
   localStorage.clear();
   sessionStorage.clear();
-  window.location.reload();
+  window.location.href = "https://orange-booking-kenli.surge.sh/"; //redirect to home page
 };
 
-// const editUser = (e) => {
-//   e.preventDefault();
-
-//   localStorage.clear();
-//   sessionStorage.clear();
-//   window.location.reload();
-// };
-// const checkBookingStatus = (e) => {
-//   e.preventDefault();
-
-//   localStorage.clear();
-//   sessionStorage.clear();
-//   window.location.reload();
-// };
-
 const Navbar = () => {
-  // const [editMode, setEditMode] = useState(false);
   const { user } = useContext(AuthContext);
-
-  // const changeToFalse = () => {
-  //   setEditMode(false);
-  // };
 
   return (
     <div className="navbar">
@@ -53,12 +27,6 @@ const Navbar = () => {
             <Link to="/booking">
               <button className="navButton">My Booking</button>
             </Link>
-            {/* <Link
-              // changeToFalse={changeToFalse}
-              to="/editProfile"
-            >
-              <button className="navButton">Edit Info</button>
-            </Link> */}
             <button className="navButton" onClick={logout}>
               Logout
             </button>
