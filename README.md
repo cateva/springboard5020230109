@@ -6,7 +6,7 @@ I am developing a hotel booking website named "OrangeBooking" using React in the
 
 I use node.js to build backend and deploy on Heroku, and use react to build front and deploy to Surge, then connect them together.
 
-How to access to the website
+How to access to the website via Surge
 
 - download the repository
 - open terminal, cd to repository folder, then cd to "client"
@@ -15,6 +15,39 @@ How to access to the website
 - once completed, cd to "build"
 - enter "npx surge"
 - as you login to surge, make sure change the domain name to "https://orange-booking-kenli.surge.sh/"
+
+How to access to the website locally
+download the repository
+
+backend:
+
+- open terminal, cd to repository folder, then cd to "api"
+- at terminal:
+- npm install
+- npm init --y
+- npm i
+- npm install express
+  For this project, you also need to install addtional extensions:
+- npm install dotenv
+- npm install mongoose
+- npm install jsonwebtoken
+- npm install cookie-parser
+- npm install bcryptjs
+- npm install cors
+- lastly, enter : npx nodemon index.js
+
+frontend:
+
+- open terminal, cd to repository folder, then cd to "client"
+- at terminal:
+- npm install
+- npm install react-router-dom
+- npm install axios
+- npm start
+
+The website should pop out
+
+---
 
 As a software developer, I am developing a hotel booking website named "OrangeBooking" using React in the frontend and Node.js in the backend. This website will allow users to search for and book hotel rooms at various destinations around the world.
 
