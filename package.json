@@ -1,0 +1,29 @@
+{
+  "name": "50capstone-project2",
+  "version": "1.0.0",
+  "description": "## Online hotel searching and booking website using content API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cateva/springboard5020230109.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cateva/springboard5020230109/issues"
+  },
+  "homepage": "https://github.com/cateva/springboard5020230109#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.0.5"
+  }
+}

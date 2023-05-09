@@ -47,6 +47,15 @@ frontend:
 
 The website should pop out
 
+Testing:
+
+I added four tests in client -> src ->
+
+- components -> header
+- pages -> register
+- pages -> login
+- pages -> editProfile
+
 ---
 
 As a software developer, I am developing a hotel booking website named "OrangeBooking" using React in the frontend and Node.js in the backend. This website will allow users to search for and book hotel rooms at various destinations around the world.
